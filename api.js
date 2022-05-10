@@ -27,6 +27,7 @@ fetch(url)
 
     fetch(apiUrl)
         .then((data)=> data.json())
+      
         .then( (pokemon)=> generateHtml(pokemon) )
 
     const generateHtml = (data) => {
@@ -37,6 +38,7 @@ fetch(url)
         <div class="details">
             <span>Height: ${data.height}</span>
             <span>Weight: ${data.weight}</span>
+            <span>Base Experience: ${data.base_experience}XP</span>
         </div>
         `
     
